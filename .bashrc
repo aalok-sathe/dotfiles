@@ -122,5 +122,7 @@ fi
 #### END OF DEFAULT BASHRC ####
 
 
-
+# set vim as default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
