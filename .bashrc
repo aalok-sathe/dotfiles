@@ -127,6 +127,9 @@ if [ -f ~/.bash_paths ]; then
     export PATH
 fi
 
+# protect files being deleted using safety net
+alias rm=trash
+
 # set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
