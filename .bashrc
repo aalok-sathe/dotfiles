@@ -121,8 +121,21 @@ fi
 
 #### END OF DEFAULT BASHRC ####
 
+# read path definitiions, if any (useful with pathin)
+if [ -f ~/.bash_paths ]; then
+    . ~/.bash_paths
+    export PATH
+fi
 
 # set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# parse git branch when inside a repository
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# set terminal prompt
+PS1 = '${debian_chroot:+($debian_chroot)}\A\[\033[01;32m\] \u \[\033[01;35m\]@\[\033[00m\] \[\033[01;34m\][\w]\[\033[00m\]
+ $(parse_git_branch):: '
