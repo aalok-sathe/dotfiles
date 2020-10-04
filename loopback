@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 
-# (C) 2020 Aalok S.
+# loopback wrapper script. (C) 2020 Aalok S.
+# Usage:
+# ---
+# python3 loopback ['0' | '1']
+#
+# default behaviour: toggles state as previously known 
+#   (the only issue would be if the computer is shut down
+#     while the module was enabled)
+# optional arguments: 
+#   '0'   set the state to disabled
+#   '1'   set the state to enabled
 
 from subprocess import run
 from pathlib import Path
