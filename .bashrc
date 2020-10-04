@@ -137,5 +137,5 @@ parse_git_branch() {
 }
 
 # set terminal prompt
-PS1 = '${debian_chroot:+($debian_chroot)}\A\[\033[01;32m\] \u \[\033[01;35m\]@\[\033[00m\] \[\033[01;34m\][\w]\[\033[00m\]
+PS1='${debian_chroot:+($debian_chroot)}\A\[\033[01;32m\] \u \[\033[01;35m\]@\[\033[00m\] \[\033[01;34m\][\w]\[\033[00m\]
  $(parse_git_branch):: '
