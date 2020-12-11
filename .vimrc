@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 set number                    " show line numbers
+set spell
 filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
